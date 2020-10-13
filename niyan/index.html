@@ -1,0 +1,78 @@
+﻿
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <title>妮言</title>
+	<link rel="shortcut icon" href="/niyan/favicon.ico" type="image/vnd.microsoft.icon" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="Hans,小镇,Hans小镇,方寸之间,妮言,妮语,一言">
+    <meta name="description" content="妮言妮语 Hans爱妮妮">
+    <link rel="stylesheet" href="/niyan/css/hitokoto.css">
+    <link rel="stylesheet" href="/niyan/css/icon.css">
+    <link rel="stylesheet" href="/niyan/json/material/material.indigo-pink.min.css">
+    <link rel="stylesheet" href="/niyan/json/material/animate.min.css">
+     <script src="/niyan/js/jquery.js"></script>
+    <script defer src="/niyan/json/material/material.min.js"></script>
+	
+</head>
+
+<body style="position:absolute;">
+<div class="background">
+</div>
+<div class="mdl-layout mdl-js-layout animated fadeIn">
+    <!--banner-->
+    <header class="mdl-layout__header mdl-layout__header--scroll mdl-layout__header--transparent" id="nav">
+        <div class="mdl-layout__header-row">
+            <!-- Title -->
+            <span class="mdl-layout-title">妮言</span>
+            <!-- Add spacer, to align navigation to the right -->
+            <div class="mdl-layout-spacer"></div>
+            <!-- Navigation -->
+            <nav class="mdl-navigation">
+                <a class="mdl-navigation__link" href="http://yeriii.com">首页</a>              
+            </nav>
+        </div>
+    </header>
+
+    <div class="mdl-layout__drawer" aria-hidden="true">
+        <span class="mdl-layout-title">妮言</span>
+		<nav class="mdl-navigation">
+                <a class="mdl-navigation__link" href="http://yeriii.com">首页</a>
+            </nav>
+    </div>
+    <!--sidebar-->
+  <div aria-expanded="false" role="button" tabindex="0" class="mdl-layout__drawer-button"><i class="material-icons"></i></div>
+
+  <div aria-expanded="false" role="button" tabindex="0" class="mdl-layout__drawer-button"><i class="material-icons"></i></div>
+    <main class="mdl-layout__content">
+        <div class="page-content">
+			<!--hitokoto一言-->
+			<div id="hitokoto" class="animated fadeIn">
+				<p style="text-align:left" class="text">『</p><br/>
+				<center><p style="text-align:center;width:90%;margin-top:-40px" class="text"><script src="/niyan/get"></script></p></center>
+				<br/>
+				<p style="text-align:right;margin-top:-40px" class="text">』</p><br/>
+			</div>
+		</div>
+    </main>
+</div>
+
+
+<!--版权信息-->
+<p id="footer">
+	Copyright © 2014-2019 妮妮猪
+</p>
+
+<script type="text/javascript">
+var like_num=0;
+
+function like(ID){
+    $.get("/Like?ID="+ID,function(data,status){alert(data)});
+    $("#like_number1").attr("data-badge",like_num+1);
+    $("#like_number2").attr("data-badge",like_num+1);
+
+}
+</script>
+</body>
+</html>
